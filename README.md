@@ -116,10 +116,31 @@ These functions manually persist 'key' within the database
 ###Changelog
 10/31/12: Made keys persist immediately after setItem is called. This eliminates the risk of losing keys if your process crashes.
 
-10/31/12: Made examples prettier	
+10/31/12: Made examples prettier
+
+##Run tests [ Mocha with Chai utilised ]
+
+```javascript
+
+mocha
+
+Unit Testing nodePersist
+✓ Catch exceptions from setItem() 
+	Testing independent getter functions
+	  	✓ getItem() should return undefined if new key is passed
+	  	✓ getItem() should return value when existant
+	  	✓ length() should return number of keys
+	  	✓ values() should return values of all keys
+	Testing independent delete functions
+	  	✓ removeItem() should remove existing key from persistence
+	  	✓ clear() should remove all keys from persistence
+
+7 passing (35ms)
+
+```
+
 
 ###TODO
-1. Make some tests
-2. Make more examples	
+1. Make more examples	
 
 ###[Simon Last](http://simonlast.org)		
