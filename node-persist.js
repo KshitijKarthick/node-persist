@@ -134,7 +134,9 @@ exports.values = function(callback) {
 exports.valuesWithKeyMatch = function(match, callback) {
     callback(
         _.filter(data, function(value, key){
-            console.log(key);
+            if(options.logging){
+                console.log(key);
+            }
             return key.has(match);
         }));
 }
